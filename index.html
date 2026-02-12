@@ -45,14 +45,357 @@
                         <strong>Luis Fernando Guarachi Apaza</strong> — Colaborador
                     </li>
                     <li class="list-group-item">
-                        <strong>Josue Angel Vallejos Condori</strong> — Colaborador
+<div class="card my-4 shadow-sm">
+    <div class="card-body">
+   
+
+        <div class="row align-items-center">
+            <!-- Foto -->
+            <div class="col-md-3 text-center mb-3">
+                <img 
+                    src="https://preview.redd.it/serious-cat-meme-unedited-version-from-2003-found-by-v0-90prc33ob1ze1.jpeg?width=2560&format=pjpg&auto=webp&s=69718ad34727ec7c70e26b28fedf38886cee7b3e"
+                    alt="Foto de perfil"
+                    class="rounded-circle img-fluid"
+                    style="max-width: 250px;"
+                >
+            </div>
+
+            <!-- Información -->
+            <div class="col-md-9">
+                <h5 class="mb-1">Josue Angel Vallejos Condori</h5>
+                <p class="text-muted mb-2">
+                    Colaborador | Desarrollo Web & Automatización Industrial
+                </p>
+
+                <p>
+                    Estudiante con interés en el desarrollo de aplicaciones web y sistemas
+                    informáticos, apasionado por la automatización industrial y el control
+                    de procesos mediante PLCs. Enfocado en crear soluciones eficientes que
+                    integren software, tecnología industrial y buenas prácticas de desarrollo.
+                </p>
+
+                <!-- Lenguajes y hobbies -->
+                <div class="mt-3">
+                    <strong>Lenguajes, tecnologías e intereses:</strong>
+                    <ul class="list-inline mt-2">
+                        <li class="list-inline-item badge bg-primary">JavaScript</li>
+                        <li class="list-inline-item badge bg-success">HTML</li>
+                        <li class="list-inline-item badge bg-info text-dark">CSS</li>
+                        <li class="list-inline-item badge bg-warning text-dark">MySQL</li>
+                        <li class="list-inline-item badge bg-secondary">PLCs</li>
+                        <li class="list-inline-item badge bg-dark">Automatización Industrial</li>
+                        <li class="list-inline-item badge bg-danger">Bases de Datos</li>
+                        <li class="list-inline-item badge bg-primary">Juegos en Red</li>
+                        <li class="list-inline-item badge bg-success">Fútbol</li>
+                        <li class="list-inline-item badge bg-warning text-dark">Básquet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                     </li>
                 </ul>
             </div>
         </div>
 
         <!-- SECCIÓN FUNCIONALIDADES (Colaborador 1) -->
-        
+        <div class="card mt-4 shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title mb-3">Funcionalidades del sistema</h4>
+        <p class="text-muted">
+            A continuación se presentan las principales funcionalidades del sistema,
+            representadas mediante una simulación visual con datos dinámicos.
+        </p>
+
+        <div class="row g-4">
+
+            <!-- Registro / Edición / Eliminación -->
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100">
+                    <h5>Gestión de productos</h5>
+                    <p class="text-muted">
+                        Registro, edición y eliminación de productos del inventario.
+                    </p>
+
+                    <input class="form-control mb-2" placeholder="Código del producto" disabled>
+                    <input class="form-control mb-2" placeholder="Nombre del producto" disabled>
+                    <input class="form-control mb-2" placeholder="Stock inicial" disabled>
+
+                    <div class="d-flex gap-2">
+                     
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inventario en tiempo real -->
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100">
+                    <h5>Monitoreo de stock en tiempo real</h5>
+                    <p class="text-muted">
+                        Visualización automática del stock disponible.
+                    </p>
+
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Stock</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaStock"></tbody>
+                    </table>
+
+                    <small class="text-muted">
+                        Actualización simulada cada 3 segundos
+                    </small>
+                </div>
+            </div>
+
+            <!-- Movimientos -->
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100">
+                    <h5>Movimientos de inventario</h5>
+                    <p class="text-muted">
+                        Registro ordenado de entradas y salidas de productos.
+                    </p>
+
+                    <ul class="list-group list-group-flush" id="listaMovimientos"></ul>
+                </div>
+            </div>
+
+            <!-- Reportes -->
+            <div class="col-md-6">
+                <div class="border rounded p-3 h-100">
+                    <h5>Reportes básicos</h5>
+                    <p class="text-muted">
+                        Información resumida para la toma de decisiones.
+                    </p>
+
+                    <div class="row text-center">
+                        <div class="col">
+                            <h6>Total productos</h6>
+                            <span class="badge bg-primary fs-6" id="repProductos">0</span>
+                        </div>
+                        <div class="col">
+                            <h6>Stock bajo</h6>
+                            <span class="badge bg-danger fs-6" id="repStockBajo">0</span>
+                        </div>
+                        <div class="col">
+                            <h6>Movimientos</h6>
+                            <span class="badge bg-success fs-6" id="repMovimientos">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+/* =============================
+   DATOS SIMULADOS
+============================= */
+const productos = [
+    { nombre: "Teclado", stock: 12 },
+    { nombre: "Mouse", stock: 5 },
+    { nombre: "Monitor", stock: 3 },
+    { nombre: "Laptop", stock: 7 }
+];
+
+let movimientos = [];
+
+/* =============================
+   ACTUALIZAR STOCK
+============================= */
+function actualizarStock() {
+    const tbody = document.getElementById("tablaStock");
+    tbody.innerHTML = "";
+
+    let stockBajo = 0;
+
+    productos.forEach(p => {
+        let estado = p.stock <= 4 ? "Bajo" : "Normal";
+        let badge = p.stock <= 4 ? "bg-danger" : "bg-success";
+
+        if (p.stock <= 4) stockBajo++;
+
+        tbody.innerHTML += `
+            <tr>
+                <td>${p.nombre}</td>
+                <td>${p.stock}</td>
+                <td><span class="badge ${badge}">${estado}</span></td>
+            </tr>
+        `;
+    });
+
+    document.getElementById("repProductos").innerText = productos.length;
+    document.getElementById("repStockBajo").innerText = stockBajo;
+    document.getElementById("repMovimientos").innerText = movimientos.length;
+}
+
+/* =============================
+   MOVIMIENTOS SIMULADOS
+============================= */
+function generarMovimiento() {
+    const prod = productos[Math.floor(Math.random() * productos.length)];
+    const tipo = Math.random() > 0.5 ? "Entrada" : "Salida";
+    const cantidad = Math.floor(Math.random() * 3) + 1;
+
+    if (tipo === "Salida" && prod.stock > 0) {
+        prod.stock -= cantidad;
+    } else {
+        prod.stock += cantidad;
+    }
+
+    movimientos.unshift(`${tipo} de ${cantidad} unidad(es) - ${prod.nombre}`);
+    if (movimientos.length > 5) movimientos.pop();
+
+    const lista = document.getElementById("listaMovimientos");
+    lista.innerHTML = "";
+    movimientos.forEach(m => {
+        lista.innerHTML += `<li class="list-group-item">${m}</li>`;
+    });
+}
+
+/* =============================
+   SIMULACIÓN TIEMPO REAL
+============================= */
+setInterval(() => {
+    generarMovimiento();
+    actualizarStock();
+}, 3000);
+
+actualizarStock();
+</script>
+<div class="card my-4 shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title mb-4">Funcionalidades del Sistema</h4>
+
+        <!-- Registro de producto -->
+        <form id="productForm" class="row g-3 mb-4">
+            <div class="col-md-4">
+                <input type="text" id="name" class="form-control" placeholder="Nombre del producto" required>
+            </div>
+            <div class="col-md-3">
+                <input type="number" id="stock" class="form-control" placeholder="Stock inicial" required>
+            </div>
+            <div class="col-md-3">
+                <input type="number" id="price" class="form-control" placeholder="Precio" required>
+            </div>
+            <div class="col-md-2 d-grid">
+                <button class="btn btn-primary">Agregar</button>
+            </div>
+        </form>
+
+        <!-- Resumen -->
+        <div class="row text-center mb-4">
+            <div class="col-md-4">
+                <div class="alert alert-info">
+                    <strong>Total Productos</strong>
+                    <div id="totalProducts">0</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-success">
+                    <strong>Stock Total</strong>
+                    <div id="totalStock">0</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="alert alert-warning">
+                    <strong>Última Actualización</strong>
+                    <div id="lastUpdate">-</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla productos -->
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>Producto</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productTable"></tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+const form = document.getElementById("productForm");
+const table = document.getElementById("productTable");
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const product = {
+        id: Date.now(),
+        name: name.value,
+        stock: parseInt(stock.value),
+        price: parseFloat(price.value)
+    };
+
+    products.push(product);
+    save();
+    form.reset();
+});
+
+function save() {
+    localStorage.setItem("products", JSON.stringify(products));
+    render();
+}
+
+function render() {
+    table.innerHTML = "";
+    let totalStock = 0;
+
+    products.forEach(p => {
+        totalStock += p.stock;
+        table.innerHTML += `
+            <tr class="text-center">
+                <td>${p.name}</td>
+                <td>${p.stock}</td>
+                <td>$${p.price}</td>
+                <td>
+                    <button class="btn btn-sm btn-warning" onclick="edit(${p.id})">Editar</button>
+                    <button class="btn btn-sm btn-danger" onclick="remove(${p.id})">Eliminar</button>
+                </td>
+            </tr>`;
+    });
+
+    document.getElementById("totalProducts").innerText = products.length;
+    document.getElementById("totalStock").innerText = totalStock;
+    document.getElementById("lastUpdate").innerText = new Date().toLocaleTimeString();
+}
+
+function remove(id) {
+    products = products.filter(p => p.id !== id);
+    save();
+}
+
+function edit(id) {
+    const p = products.find(p => p.id === id);
+    const newStock = prompt("Nuevo stock:", p.stock);
+
+    if (newStock !== null) {
+        p.stock = parseInt(newStock);
+        save();
+    }
+}
+
+render();
+</script>
+
+
+
         <!-- SECCIÓN Tecnologias usadas (Colaborador 2) -->
     </div>
 
