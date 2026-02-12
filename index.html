@@ -5,51 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InventApp - Sistema de Inventarios</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+
+        .glass {
+            background: rgba(133, 85, 244, 0.08);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .team-card {
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+        }
+
+        .profile-img {
+            border: 4px solid #0dcaf0;
+            padding: 3px;
+        }
+
+        .progress {
+            height: 18px;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #141e30, #243b55);
+        }
+
+        .badge-tech {
+            font-size: 0.85rem;
+            margin: 2px;
+        }
+        /* Colores de texto */
+        .text-lead {
+            color: #00e5ff;
+        }
+
+        .text-collab {
+            color: #c77dff;
+        }
+
+        .text-soft {
+            color: #cfd8dc;
+        }
+
+        .role-lead {
+            background: linear-gradient(135deg,#00c6ff,#0072ff);
+            color: #fff;
+        }
+
+        .role-collab {
+            background: linear-gradient(135deg,#7b2ff7,#f107a3);
+            color: #fff;
+        }
+
+        .btn-lead {
+            border-color: #00e5ff;
+            color: #00e5ff;
+        }
+
+        .btn-lead:hover {
+            background: #00e5ff;
+            color: #000;
+        }
+
+        .btn-collab {
+            border-color: #c77dff;
+            color: #c77dff;
+        }
+
+        .btn-collab:hover {
+            background: #c77dff;
+            color: #000;
+        }
+        .small {
+            color: white;
+        } 
+        .title-white {
+            color: white;
+        }
+
+    </style>
 </head>
-<style>
-    .team-card {
-        transition: all 0.3s ease;
-        border: none;
-        border-radius: 16px;
-    }
 
-    .team-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    }
+<body>
 
-    .profile-img {
-        border: 4px solid #0d6efd;
-        padding: 4px;
-    }
-</style>
-<body class="bg-light">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#"><i class="bi bi-box-seam"></i> InventApp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="container py-5">
-
-        <!-- Título del proyecto -->
-        <div class="text-center mb-4">
-            <h1 class="fw-bold">Sistema de Inventarios: InventApp</h1>
-            <p class="text-muted">Proyecto académico - Taller de Aplicaciones en Internet</p>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="bi bi-house"></i> Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.php"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team"><i class="bi bi-people"></i> Equipo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tech"><i class="bi bi-cpu"></i> Tecnologías</a>
+                </li>
+            </ul>
         </div>
+    </div>
+</nav>
 
-        <!-- Descripción -->
-        <div class="card mb-4 shadow-sm">
-            <div class="card-body">
-                <h4 class="card-title">Descripción del sistema</h4>
-                <p class="card-text">
-                    InventApp es un sistema de inventarios diseñado para facilitar el control,
-                    registro y seguimiento de productos dentro de una organización. 
-                    Permite gestionar entradas y salidas, mantener un stock actualizado
-                    y mejorar la toma de decisiones mediante una administración eficiente
-                    de los recursos.
-                </p>
-            </div>
-        </div>
+<div class="container py-5">
+
 
         <!-- Integrantes -->
         <div class="card shadow-sm">
@@ -440,9 +521,415 @@ render();
 
 
         <!-- SECCIÓN Tecnologias usadas (Colaborador 2) -->
+
+    <!-- TÍTULO -->
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">Sistema de Inventarios - InventApp</h1>
+        <p class="text-info">Gestión moderna, rápida y eficiente</p>
+
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DESCRIPCIÓN -->
+    <div class="glass p-4 mb-4">
+        <h4><i class="bi bi-info-circle"></i> Descripción</h4>
+        <p>
+            InventApp es un sistema integral de control de inventarios que permite registrar, 
+            editar, eliminar productos, gestionar movimientos, controlar stock en tiempo real 
+            y generar reportes básicos para una mejor toma de decisiones.
+        </p>
+    </div>
+
+    <!-- EQUIPO -->
+<div id="team" class="glass p-4 mb-4">
+    <h4 class="mb-4 text-center">
+        <i class="bi bi-people-fill"></i> Equipo de Desarrollo
+    </h4>
+
+    <div class="row g-4">
+
+        <!-- Freddy -->
+        <div class="col-md-4">
+            <div class="card team-card glass text-center p-3">
+                <img src="img/freddy.png" class="rounded-circle mx-auto profile-img" width="140">
+
+                <h5 class="fw-bold mt-3 mb-1 text-lead">Freddy Vincenty Paniagua</h5>   
+                <span class="badge role-lead mb-2">
+                    <i class="bi bi-award-fill"></i> Team Lead
+                </span>
+
+                <button class="btn btn-lead w-100 mt-2"
+                    data-bs-toggle="collapse" data-bs-target="#freddy">
+                    <i class="bi bi-chevron-double-down"></i> Ver perfil
+                </button>
+
+                <div class="collapse mt-3 text-start" id="freddy">
+
+                    <p class="small">
+                        Líder del proyecto, encargado del diseño de arquitectura y dirección técnica.
+                    </p>
+
+                    <p class="fw-bold mb-1 title-white">
+                        <i class="bi bi-code-slash text-lead"></i> Tecnologías:
+                    </p>
+                    <span class="badge bg-info">PHP</span>
+                    <span class="badge bg-info">MySQL</span>
+                    <span class="badge bg-info">Bootstrap</span>
+                    <span class="badge bg-info">GitHub</span>
+
+                    <p class="fw-bold mt-3 mb-1 title-white">
+                        <i class="bi bi-heart-fill text-danger"></i> Hobbies:
+                    </p>
+                    <span class="badge bg-secondary">Mentoría</span>
+                    <span class="badge bg-secondary">Programar</span>
+                    <span class="badge bg-secondary">Innovar</span>
+                    <span class="badge bg-secondary">Diseño</span>
+
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="#" class="btn btn-outline-warning btn-sm">
+                            <i class="bi bi-globe"></i> Portafolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fernando -->
+        <div class="col-md-4">
+            <div class="card team-card glass text-center p-3">
+                <img src="img/fernando.jpg" class="rounded-circle mx-auto profile-img" width="140">
+
+                <h5 class="fw-bold mt-3 mb-1 text-collab">Luis Fernando Guarachi Apaza</h5>
+                <span class="badge role-collab mb-2">
+                    <i class="bi bi-person-badge"></i> Colaborador
+                </span>
+
+               <button class="btn btn-collab w-100 mt-2"
+                    data-bs-toggle="collapse" data-bs-target="#fernando">
+                    <i class="bi bi-chevron-double-down"></i> Ver perfil
+                </button>
+
+                <div class="collapse mt-3 text-start" id="fernando">
+
+                    <p class="small">
+                        Desarrollador backend y frontend, enfocado en lógica del sistema y UI/UX.
+                    </p>
+
+                    <p class="fw-bold mb-1 title-white">
+                        <i class="bi bi-code-slash text-lead"></i> Tecnologías:
+                    </p>
+                    <span class="badge bg-warning text-dark">HTML</span>
+                    <span class="badge bg-warning text-dark">CSS</span>
+                    <span class="badge bg-warning text-dark">JS</span>
+                    <span class="badge bg-warning text-dark">PHP</span>
+                    <span class="badge bg-warning text-dark">MySQL</span>
+
+                    <p class="fw-bold mt-3 mb-1 title-white">
+                        <i class="bi bi-heart-fill text-danger"></i> Hobbies:
+                    </p>
+                    <span class="badge bg-secondary">Programar</span>
+                    <span class="badge bg-secondary">Lectura</span>
+                    <span class="badge bg-secondary">Deporte</span>
+                    <span class="badge bg-secondary">Aprender</span>
+
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="#" class="btn btn-outline-warning btn-sm">
+                            <i class="bi bi-globe"></i> Portafolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Josue -->
+        <div class="col-md-4">
+            <div class="card team-card glass text-center p-3">
+                <img src="img/josue.jpg" class="rounded-circle mx-auto profile-img" width="140">
+
+                <h5 class="fw-bold mt-3 mb-1 text-collab">Josue Angel Vallejos Condori</h5>
+                <span class="badge role-collab mb-2">
+                    <i class="bi bi-person-check-fill"></i> Colaborador
+                </span>
+
+               <button class="btn btn-collab w-100 mt-2"
+                    data-bs-toggle="collapse" data-bs-target="#josue">
+                    <i class="bi bi-chevron-double-down"></i> Ver perfil
+                </button>
+
+                <div class="collapse mt-3 text-start" id="josue">
+
+                    <p class="small">
+                        Encargado de testing, soporte técnico y documentación del sistema.
+                    </p>
+
+                    <p class="fw-bold mb-1 title-white">
+                        <i class="bi bi-code-slash text-lead"></i> Tecnologías:
+                    </p>
+                    <span class="badge bg-success">Bootstrap</span>
+                    <span class="badge bg-success">MySQL</span>
+                    <span class="badge bg-success">Git</span>
+
+                    <p class="fw-bold mt-3 mb-1 title-white">
+                        <i class="bi bi-heart-fill text-danger"></i> Hobbies:
+                    </p>
+                    <span class="badge bg-secondary">Testing</span>
+                    <span class="badge bg-secondary">Videojuegos</span>
+                    <span class="badge bg-secondary">Tecnología</span>
+                    <span class="badge bg-secondary">Aprendizaje</span>
+
+                    <div class="d-flex gap-2 mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm">
+                            <i class="bi bi-github"></i> GitHub
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="#" class="btn btn-outline-warning btn-sm">
+                            <i class="bi bi-globe"></i> Portafolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <!-- TECNOLOGÍAS -->
+    <div id="tech" class="glass p-4">
+    <h4 class="mb-4 text-center">
+        <i class="bi bi-cpu-fill text-info"></i> Stack Tecnológico
+    </h4>
+
+    <p class="text-center text-soft mb-4">
+        Tecnologías utilizadas en el desarrollo del sistema, su función dentro del proyecto
+        y nivel de dominio aplicado.
+    </p>
+
+    <div class="row g-4">
+
+        <!-- PHP -->
+        <div class="col-md-6">
+            <div class="glass p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold text-info mb-0">
+                        <i class="bi bi-filetype-php"></i> PHP
+                    </h6>
+                    <span class="badge role-lead"
+                          data-bs-toggle="tooltip"
+                          title="Lenguaje backend principal encargado de la lógica del sistema, seguridad, autenticación, CRUD, reglas de negocio y conexión con la base de datos.">
+                        Backend Core
+                    </span>
+                </div>
+
+                <p class="small text-soft">
+                    Permite procesar la lógica principal del sistema, controlar los flujos de datos,
+                    validar información y administrar las operaciones del inventario.
+                </p>
+
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-info progress-animate" style="width: 90%">90%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MySQL -->
+        <div class="col-md-6">
+            <div class="glass p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold text-warning mb-0">
+                        <i class="bi bi-database-fill"></i> MySQL
+                    </h6>
+                    <span class="badge bg-warning text-dark"
+                          data-bs-toggle="tooltip"
+                          title="Motor de base de datos encargado del almacenamiento, relaciones, consultas, integridad y seguridad de la información.">
+                        Base de Datos
+                    </span>
+                </div>
+
+                <p class="small text-soft">
+                    Almacena toda la información del sistema, permitiendo consultas rápidas,
+                    relaciones entre tablas y control eficiente de los datos.
+                </p>
+
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-warning text-dark progress-animate" style="width: 88%">88%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="col-md-6">
+            <div class="glass p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold text-purple mb-0">
+                        <i class="bi bi-bootstrap-fill"></i> Bootstrap 5
+                    </h6>
+                    <span class="badge bg-purple"
+                          data-bs-toggle="tooltip"
+                          title="Framework CSS para diseño responsive, UX/UI profesional, componentes modernos y accesibilidad.">
+                        UI Framework
+                    </span>
+                </div>
+
+                <p class="small text-soft">
+                    Permite crear interfaces modernas, responsivas y visualmente atractivas,
+                    optimizando la experiencia del usuario.
+                </p>
+
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-purple progress-animate" style="width: 95%">95%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="col-md-6">
+            <div class="glass p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold text-warning mb-0">
+                        <i class="bi bi-filetype-js"></i> JavaScript
+                    </h6>
+                    <span class="badge bg-warning text-dark"
+                          data-bs-toggle="tooltip"
+                          title="Lenguaje encargado de la interactividad, validaciones dinámicas, eventos y experiencia del usuario.">
+                        Interactividad
+                    </span>
+                </div>
+
+                <p class="small text-soft">
+                    Permite generar validaciones en tiempo real, interacción dinámica,
+                    animaciones y mejora notable de la usabilidad.
+                </p>
+
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-warning text-dark progress-animate" style="width: 80%">80%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HTML -->
+        <div class="col-md-6">
+            <div class="glass p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold text-danger mb-0">
+                        <i class="bi bi-filetype-html"></i> HTML5
+                    </h6>
+                    <span class="badge bg-danger"
+                          data-bs-toggle="tooltip"
+                          title="Lenguaje de marcado para la estructura semántica, accesibilidad y organización del contenido.">
+                        Estructura
+                    </span>
+                </div>
+
+                <p class="small text-soft">
+                    Define la estructura del sistema, garantizando organización,
+                    accesibilidad, semántica correcta y compatibilidad multiplataforma.
+                </p>
+
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-danger progress-animate" style="width: 95%">95%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="col-md-6">
+            <div class="glass p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold text-info mb-0">
+                        <i class="bi bi-filetype-css"></i> CSS3
+                    </h6>
+                    <span class="badge bg-info"
+                          data-bs-toggle="tooltip"
+                          title="Lenguaje encargado del diseño visual, estilos, animaciones y layouts modernos.">
+                        Diseño
+                    </span>
+                </div>
+
+                <p class="small text-soft">
+                    Permite mejorar la presentación visual, implementar animaciones,
+                    efectos modernos y garantizar una interfaz agradable.
+                </p>
+
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-info progress-animate" style="width: 90%">90%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="col-md-6">
+            <div class="glass p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold text-light mb-0">
+                        <i class="bi bi-github"></i> GitHub
+                    </h6>
+                    <span class="badge bg-dark"
+                          data-bs-toggle="tooltip"
+                          title="Sistema de control de versiones para trabajo colaborativo, ramas, control de cambios y despliegue.">
+                        Versionado
+                    </span>
+                </div>
+
+                <p class="small text-soft">
+                    Facilita el trabajo colaborativo, control de versiones, integración continua
+                    y respaldo seguro del código fuente.
+                </p>
+
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-dark progress-animate" style="width: 85%">85%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- XAMPP -->
+        <div class="col-md-6">
+            <div class="glass p-3 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold text-success mb-0">
+                        <i class="bi bi-server"></i> XAMPP
+                    </h6>
+                    <span class="badge bg-success"
+                          data-bs-toggle="tooltip"
+                          title="Servidor local con Apache, PHP y MySQL para pruebas, desarrollo y simulación del entorno real.">
+                        Entorno Local
+                    </span>
+                </div>
+
+                <p class="small text-soft">
+                    Permite desarrollar, probar y depurar el sistema localmente
+                    antes de su despliegue en producción.
+                </p>
+
+                <div class="progress" style="height: 10px;">
+                    <div class="progress-bar bg-success progress-animate" style="width: 90%">90%</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
 </body>
 </html>
