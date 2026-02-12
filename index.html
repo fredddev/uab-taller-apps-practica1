@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,388 +15,145 @@
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark shadow">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="#"><i class="bi bi-box-seam"></i> InventApp</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio"><i class="bi bi-box-seam"></i> InventApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#"><i class="bi bi-house"></i> Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="dashboard.php"><i class="bi bi-speedometer2"></i> Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#team"><i class="bi bi-people"></i> Equipo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#tech"><i class="bi bi-cpu"></i> Tecnologías</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<div class="container py-5">
-
-
-        <!-- Integrantes -->
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <h4 class="card-title mb-3">Equipo de desarrollo</h4>
-
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <strong>Freddy Vincenty Paniagua</strong> — Team Lead
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio"><i class="bi bi-house"></i> Inicio</a>
                     </li>
-                    <li class="list-group-item bg-transparent border-0">
-                        <div class="card team-card shadow-sm p-3">
-
-                            <div class="row align-items-center">
-
-                                <!-- Foto -->
-                                <div class="col-md-3 text-center">
-                                    <img src="img/fernando.jpg"
-                                        class="img-fluid rounded-circle profile-img mb-3"
-                                        width="230"
-                                        alt="Foto Luis Fernando">
-                                </div>
-
-                                <!-- Info -->
-                                <div class="col-md-9">
-
-                                    <h5 class="fw-bold mb-1">
-                                        Luis Fernando Guarachi Apaza
-                                    </h5>
-
-                                    <span class="badge bg-primary mb-2">
-                                        <i class="bi bi-person-badge"></i> Colaborador
-                                    </span>
-
-                                    <p class="text-muted mb-2">
-                                        Estudiante de Ingeniería de Sistemas, apasionado por el desarrollo web,
-                                        backend y la creación de soluciones tecnológicas modernas.
-                                    </p>
-
-                                    <!-- Datos -->
-                                    <div class="row mb-2">
-
-                                        <div class="col-md-6">
-                                            <p class="mb-1">
-                                                <i class="bi bi-code-slash text-primary"></i>
-                                                <strong>Tecnologías:</strong>
-                                            </p>
-                                            <span class="badge bg-dark">HTML</span>
-                                            <span class="badge bg-dark">CSS</span>
-                                            <span class="badge bg-dark">JavaScript</span>
-                                            <span class="badge bg-dark">PHP</span>
-                                            <span class="badge bg-dark">MySQL</span>
-                                            <span class="badge bg-dark">Git</span>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <p class="mb-1">
-                                                <i class="bi bi-heart-fill text-danger"></i>
-                                                <strong>Hobbies:</strong>
-                                            </p>
-                                            <span class="badge bg-secondary">Programar</span>
-                                            <span class="badge bg-secondary">Lectura</span>
-                                            <span class="badge bg-secondary">Deporte</span>
-                                            <span class="badge bg-secondary">Aprender</span>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Botones -->
-                                    <div class="d-flex gap-2">
-                                        <a href="#" class="btn btn-outline-dark btn-sm">
-                                            <i class="bi bi-github"></i> GitHub
-                                        </a>
-                                        <a href="#" class="btn btn-outline-primary btn-sm">
-                                            <i class="bi bi-linkedin"></i> LinkedIn
-                                        </a>
-                                        <a href="#" class="btn btn-outline-success btn-sm">
-                                            <i class="bi bi-globe"></i> Portafolio
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team"><i class="bi bi-people"></i> Equipo</a>
                     </li>
-                    <li class="list-group-item">
-                        <strong>Josue Angel Vallejos Condori</strong> — Colaborador
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tech"><i class="bi bi-cpu"></i> Stack Tecnológico</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#funcionalidades"><i class="bi bi-gear"></i> Funcionalidades</a>
                     </li>
                 </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- SECCIÓN FUNCIONALIDADES (Colaborador 1) -->
-        <div class="card mt-4 shadow-sm">
-    <div class="card-body">
-        <h4 class="card-title mb-3">Funcionalidades del sistema</h4>
-        <p class="text-muted">
-            A continuación se presentan las principales funcionalidades del sistema,
-            representadas mediante una simulación visual con datos dinámicos.
-        </p>
+    <div class="container py-5" id="inicio">
+        <script>
+            /* =============================
+               DATOS SIMULADOS
+            ============================= */
+            const productos = [
+                { nombre: "Teclado", stock: 12 },
+                { nombre: "Mouse", stock: 5 },
+                { nombre: "Monitor", stock: 3 },
+                { nombre: "Laptop", stock: 7 }
+            ];
 
-        <div class="row g-4">
+            let movimientos = [];
 
-            <!-- Registro / Edición / Eliminación -->
-            <div class="col-md-6">
-                <div class="border rounded p-3 h-100">
-                    <h5>Gestión de productos</h5>
-                    <p class="text-muted">
-                        Registro, edición y eliminación de productos del inventario.
-                    </p>
+            /* =============================
+               ACTUALIZAR STOCK
+            ============================= */
+            function actualizarStock() {
+                const tbody = document.getElementById("tablaStock");
+                tbody.innerHTML = "";
 
-                    <input class="form-control mb-2" placeholder="Código del producto" disabled>
-                    <input class="form-control mb-2" placeholder="Nombre del producto" disabled>
-                    <input class="form-control mb-2" placeholder="Stock inicial" disabled>
+                let stockBajo = 0;
 
-                    <div class="d-flex gap-2">
-                     
-                    </div>
-                </div>
-            </div>
+                productos.forEach(p => {
+                    let estado = p.stock <= 4 ? "Bajo" : "Normal";
+                    let badge = p.stock <= 4 ? "bg-danger" : "bg-success";
 
-            <!-- Inventario en tiempo real -->
-            <div class="col-md-6">
-                <div class="border rounded p-3 h-100">
-                    <h5>Monitoreo de stock en tiempo real</h5>
-                    <p class="text-muted">
-                        Visualización automática del stock disponible.
-                    </p>
+                    if (p.stock <= 4) stockBajo++;
 
-                    <table class="table table-sm">
-                        <thead>
-                            <tr>
-                                <th>Producto</th>
-                                <th>Stock</th>
-                                <th>Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tablaStock"></tbody>
-                    </table>
-
-                    <small class="text-muted">
-                        Actualización simulada cada 3 segundos
-                    </small>
-                </div>
-            </div>
-
-            <!-- Movimientos -->
-            <div class="col-md-6">
-                <div class="border rounded p-3 h-100">
-                    <h5>Movimientos de inventario</h5>
-                    <p class="text-muted">
-                        Registro ordenado de entradas y salidas de productos.
-                    </p>
-
-                    <ul class="list-group list-group-flush" id="listaMovimientos"></ul>
-                </div>
-            </div>
-
-            <!-- Reportes -->
-            <div class="col-md-6">
-                <div class="border rounded p-3 h-100">
-                    <h5>Reportes básicos</h5>
-                    <p class="text-muted">
-                        Información resumida para la toma de decisiones.
-                    </p>
-
-                    <div class="row text-center">
-                        <div class="col">
-                            <h6>Total productos</h6>
-                            <span class="badge bg-primary fs-6" id="repProductos">0</span>
-                        </div>
-                        <div class="col">
-                            <h6>Stock bajo</h6>
-                            <span class="badge bg-danger fs-6" id="repStockBajo">0</span>
-                        </div>
-                        <div class="col">
-                            <h6>Movimientos</h6>
-                            <span class="badge bg-success fs-6" id="repMovimientos">0</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<script>
-/* =============================
-   DATOS SIMULADOS
-============================= */
-const productos = [
-    { nombre: "Teclado", stock: 12 },
-    { nombre: "Mouse", stock: 5 },
-    { nombre: "Monitor", stock: 3 },
-    { nombre: "Laptop", stock: 7 }
-];
-
-let movimientos = [];
-
-/* =============================
-   ACTUALIZAR STOCK
-============================= */
-function actualizarStock() {
-    const tbody = document.getElementById("tablaStock");
-    tbody.innerHTML = "";
-
-    let stockBajo = 0;
-
-    productos.forEach(p => {
-        let estado = p.stock <= 4 ? "Bajo" : "Normal";
-        let badge = p.stock <= 4 ? "bg-danger" : "bg-success";
-
-        if (p.stock <= 4) stockBajo++;
-
-        tbody.innerHTML += `
+                    tbody.innerHTML += `
             <tr>
                 <td>${p.nombre}</td>
                 <td>${p.stock}</td>
                 <td><span class="badge ${badge}">${estado}</span></td>
             </tr>
         `;
-    });
+                });
 
-    document.getElementById("repProductos").innerText = productos.length;
-    document.getElementById("repStockBajo").innerText = stockBajo;
-    document.getElementById("repMovimientos").innerText = movimientos.length;
-}
+                document.getElementById("repProductos").innerText = productos.length;
+                document.getElementById("repStockBajo").innerText = stockBajo;
+                document.getElementById("repMovimientos").innerText = movimientos.length;
+            }
 
-/* =============================
-   MOVIMIENTOS SIMULADOS
-============================= */
-function generarMovimiento() {
-    const prod = productos[Math.floor(Math.random() * productos.length)];
-    const tipo = Math.random() > 0.5 ? "Entrada" : "Salida";
-    const cantidad = Math.floor(Math.random() * 3) + 1;
+            /* =============================
+               MOVIMIENTOS SIMULADOS
+            ============================= */
+            function generarMovimiento() {
+                const prod = productos[Math.floor(Math.random() * productos.length)];
+                const tipo = Math.random() > 0.5 ? "Entrada" : "Salida";
+                const cantidad = Math.floor(Math.random() * 3) + 1;
 
-    if (tipo === "Salida" && prod.stock > 0) {
-        prod.stock -= cantidad;
-    } else {
-        prod.stock += cantidad;
-    }
+                if (tipo === "Salida" && prod.stock > 0) {
+                    prod.stock -= cantidad;
+                } else {
+                    prod.stock += cantidad;
+                }
 
-    movimientos.unshift(`${tipo} de ${cantidad} unidad(es) - ${prod.nombre}`);
-    if (movimientos.length > 5) movimientos.pop();
+                movimientos.unshift(`${tipo} de ${cantidad} unidad(es) - ${prod.nombre}`);
+                if (movimientos.length > 5) movimientos.pop();
 
-    const lista = document.getElementById("listaMovimientos");
-    lista.innerHTML = "";
-    movimientos.forEach(m => {
-        lista.innerHTML += `<li class="list-group-item">${m}</li>`;
-    });
-}
+                const lista = document.getElementById("listaMovimientos");
+                lista.innerHTML = "";
+                movimientos.forEach(m => {
+                    lista.innerHTML += `<li class="list-group-item">${m}</li>`;
+                });
+            }
 
-/* =============================
-   SIMULACIÓN TIEMPO REAL
-============================= */
-setInterval(() => {
-    generarMovimiento();
-    actualizarStock();
-}, 3000);
+            /* =============================
+               SIMULACIÓN TIEMPO REAL
+            ============================= */
+            setInterval(() => {
+                generarMovimiento();
+                actualizarStock();
+            }, 3000);
 
-actualizarStock();
-</script>
-<div class="card my-4 shadow-sm">
-    <div class="card-body">
-        <h4 class="card-title mb-4">Funcionalidades del Sistema</h4>
+            actualizarStock();
+        </script>
 
-        <!-- Registro de producto -->
-        <form id="productForm" class="row g-3 mb-4">
-            <div class="col-md-4">
-                <input type="text" id="name" class="form-control" placeholder="Nombre del producto" required>
-            </div>
-            <div class="col-md-3">
-                <input type="number" id="stock" class="form-control" placeholder="Stock inicial" required>
-            </div>
-            <div class="col-md-3">
-                <input type="number" id="price" class="form-control" placeholder="Precio" required>
-            </div>
-            <div class="col-md-2 d-grid">
-                <button class="btn btn-primary">Agregar</button>
-            </div>
-        </form>
 
-        <!-- Resumen -->
-        <div class="row text-center mb-4">
-            <div class="col-md-4">
-                <div class="alert alert-info">
-                    <strong>Total Productos</strong>
-                    <div id="totalProducts">0</div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="alert alert-success">
-                    <strong>Stock Total</strong>
-                    <div id="totalStock">0</div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="alert alert-warning">
-                    <strong>Última Actualización</strong>
-                    <div id="lastUpdate">-</div>
-                </div>
-            </div>
-        </div>
+        <script>
+            let products = JSON.parse(localStorage.getItem("products")) || [];
 
-        <!-- Tabla productos -->
-        <table class="table table-bordered table-hover">
-            <thead class="table-dark text-center">
-                <tr>
-                    <th>Producto</th>
-                    <th>Stock</th>
-                    <th>Precio</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="productTable"></tbody>
-        </table>
-    </div>
-</div>
+            const form = document.getElementById("productForm");
+            const table = document.getElementById("productTable");
 
-<script>
-let products = JSON.parse(localStorage.getItem("products")) || [];
+            form.addEventListener("submit", e => {
+                e.preventDefault();
 
-const form = document.getElementById("productForm");
-const table = document.getElementById("productTable");
+                const product = {
+                    id: Date.now(),
+                    name: name.value,
+                    stock: parseInt(stock.value),
+                    price: parseFloat(price.value)
+                };
 
-form.addEventListener("submit", e => {
-    e.preventDefault();
+                products.push(product);
+                save();
+                form.reset();
+            });
 
-    const product = {
-        id: Date.now(),
-        name: name.value,
-        stock: parseInt(stock.value),
-        price: parseFloat(price.value)
-    };
+            function save() {
+                localStorage.setItem("products", JSON.stringify(products));
+                render();
+            }
 
-    products.push(product);
-    save();
-    form.reset();
-});
+            function render() {
+                table.innerHTML = "";
+                let totalStock = 0;
 
-function save() {
-    localStorage.setItem("products", JSON.stringify(products));
-    render();
-}
-
-function render() {
-    table.innerHTML = "";
-    let totalStock = 0;
-
-    products.forEach(p => {
-        totalStock += p.stock;
-        table.innerHTML += `
+                products.forEach(p => {
+                    totalStock += p.stock;
+                    table.innerHTML += `
             <tr class="text-center">
                 <td>${p.name}</td>
                 <td>${p.stock}</td>
@@ -405,443 +163,525 @@ function render() {
                     <button class="btn btn-sm btn-danger" onclick="remove(${p.id})">Eliminar</button>
                 </td>
             </tr>`;
-    });
+                });
 
-    document.getElementById("totalProducts").innerText = products.length;
-    document.getElementById("totalStock").innerText = totalStock;
-    document.getElementById("lastUpdate").innerText = new Date().toLocaleTimeString();
-}
+                document.getElementById("totalProducts").innerText = products.length;
+                document.getElementById("totalStock").innerText = totalStock;
+                document.getElementById("lastUpdate").innerText = new Date().toLocaleTimeString();
+            }
 
-function remove(id) {
-    products = products.filter(p => p.id !== id);
-    save();
-}
+            function remove(id) {
+                products = products.filter(p => p.id !== id);
+                save();
+            }
 
-function edit(id) {
-    const p = products.find(p => p.id === id);
-    const newStock = prompt("Nuevo stock:", p.stock);
+            function edit(id) {
+                const p = products.find(p => p.id === id);
+                const newStock = prompt("Nuevo stock:", p.stock);
 
-    if (newStock !== null) {
-        p.stock = parseInt(newStock);
-        save();
-    }
-}
+                if (newStock !== null) {
+                    p.stock = parseInt(newStock);
+                    save();
+                }
+            }
 
-render();
-</script>
+            render();
+        </script>
 
 
 
         <!-- SECCIÓN Tecnologias usadas (Colaborador 2) -->
 
-    <!-- TÍTULO -->
-    <div class="text-center mb-4">
-        <h1 class="fw-bold">Sistema de Inventarios - InventApp</h1>
-        <p class="text-info">Gestión moderna, rápida y eficiente</p>
+        <!-- TÍTULO -->
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">Sistema de Inventarios - InventApp</h1>
+            <p class="text-info">Gestión moderna, rápida y eficiente</p>
 
-    </div>
+        </div>
 
-    <!-- DESCRIPCIÓN -->
-    <div class="glass p-4 mb-4">
-        <h4><i class="bi bi-info-circle"></i> Descripción</h4>
-        <p>
-            InventApp es un sistema integral de control de inventarios que permite registrar, 
-            editar, eliminar productos, gestionar movimientos, controlar stock en tiempo real 
-            y generar reportes básicos para una mejor toma de decisiones.
-        </p>
-    </div>
+        <!-- DESCRIPCIÓN -->
+        <div class="glass p-4 mb-4">
+            <h4><i class="bi bi-info-circle"></i> Descripción</h4>
+            <p>
+                InventApp es un sistema integral de control de inventarios que permite registrar,
+                editar, eliminar productos, gestionar movimientos, controlar stock en tiempo real
+                y generar reportes básicos para una mejor toma de decisiones.
+            </p>
+        </div>
 
-    <!-- EQUIPO -->
-<div id="team" class="glass p-4 mb-4">
-    <h4 class="mb-4 text-center">
-        <i class="bi bi-people-fill"></i> Equipo de Desarrollo
-    </h4>
+        <!-- EQUIPO -->
+        <div id="team" class="glass p-4 mb-4">
+            <h4 class="mb-4 text-center">
+                <i class="bi bi-people-fill"></i> Equipo de Desarrollo
+            </h4>
 
-    <div class="row g-4">
+            <div class="row g-4">
 
-        <!-- Freddy -->
-        <div class="col-md-4">
-            <div class="card team-card glass text-center p-3">
-                <img src="img/freddy.png" class="rounded-circle mx-auto profile-img" width="140">
+                <!-- Freddy -->
+                <div class="col-md-4">
+                    <div class="card team-card glass text-center p-3">
+                        <img src="img/freddy.png" class="rounded-circle mx-auto profile-img" width="140">
 
-                <h5 class="fw-bold mt-3 mb-1 text-lead">Freddy Vincenty Paniagua</h5>   
-                <span class="badge role-lead mb-2">
-                    <i class="bi bi-award-fill"></i> Team Lead
-                </span>
+                        <h5 class="fw-bold mt-3 mb-1 text-lead">Freddy Vincenty Paniagua</h5>
+                        <span class="badge role-lead mb-2">
+                            <i class="bi bi-award-fill"></i> Team Lead
+                        </span>
 
-                <button class="btn btn-lead w-100 mt-2"
-                    data-bs-toggle="collapse" data-bs-target="#freddy">
-                    <i class="bi bi-chevron-double-down"></i> Ver perfil
-                </button>
+                        <button class="btn btn-lead w-100 mt-2" data-bs-toggle="collapse" data-bs-target="#freddy">
+                            <i class="bi bi-chevron-double-down"></i> Ver perfil
+                        </button>
 
-                <div class="collapse mt-3 text-start" id="freddy">
+                        <div class="collapse mt-3 text-start" id="freddy">
 
-                    <p class="small">
-                        Líder del proyecto, encargado del diseño de arquitectura y dirección técnica.
-                    </p>
+                            <p class="small">
+                                Líder del proyecto, encargado del diseño de arquitectura y dirección técnica.
+                            </p>
 
-                    <p class="fw-bold mb-1 title-white">
-                        <i class="bi bi-code-slash text-lead"></i> Tecnologías:
-                    </p>
-                    <span class="badge bg-info">PHP</span>
-                    <span class="badge bg-info">MySQL</span>
-                    <span class="badge bg-info">Bootstrap</span>
-                    <span class="badge bg-info">GitHub</span>
+                            <p class="fw-bold mb-1 title-white">
+                                <i class="bi bi-code-slash text-lead"></i> Tecnologías:
+                            </p>
+                            <span class="badge bg-info">PHP</span>
+                            <span class="badge bg-info">MySQL</span>
+                            <span class="badge bg-info">Bootstrap</span>
+                            <span class="badge bg-info">GitHub</span>
 
-                    <p class="fw-bold mt-3 mb-1 title-white">
-                        <i class="bi bi-heart-fill text-danger"></i> Hobbies:
-                    </p>
-                    <span class="badge bg-secondary">Mentoría</span>
-                    <span class="badge bg-secondary">Programar</span>
-                    <span class="badge bg-secondary">Innovar</span>
-                    <span class="badge bg-secondary">Diseño</span>
+                            <p class="fw-bold mt-3 mb-1 title-white">
+                                <i class="bi bi-heart-fill text-danger"></i> Hobbies:
+                            </p>
+                            <span class="badge bg-secondary">Mentoría</span>
+                            <span class="badge bg-secondary">Programar</span>
+                            <span class="badge bg-secondary">Innovar</span>
+                            <span class="badge bg-secondary">Diseño</span>
 
-                    <div class="d-flex gap-2 mt-3">
-                        <a href="#" class="btn btn-outline-light btn-sm">
-                            <i class="bi bi-github"></i> GitHub
-                        </a>
-                        <a href="#" class="btn btn-outline-primary btn-sm">
-                            <i class="bi bi-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="#" class="btn btn-outline-warning btn-sm">
-                            <i class="bi bi-globe"></i> Portafolio
-                        </a>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-outline-light btn-sm">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="#" class="btn btn-outline-warning btn-sm">
+                                    <i class="bi bi-globe"></i> Portafolio
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Fernando -->
-        <div class="col-md-4">
-            <div class="card team-card glass text-center p-3">
-                <img src="img/fernando.jpg" class="rounded-circle mx-auto profile-img" width="140">
+                <!-- Fernando -->
+                <div class="col-md-4">
+                    <div class="card team-card glass text-center p-3">
+                        <img src="img/fernando.jpg" class="rounded-circle mx-auto profile-img" width="140">
 
-                <h5 class="fw-bold mt-3 mb-1 text-collab">Luis Fernando Guarachi Apaza</h5>
-                <span class="badge role-collab mb-2">
-                    <i class="bi bi-person-badge"></i> Colaborador
-                </span>
+                        <h5 class="fw-bold mt-3 mb-1 text-collab">Luis Fernando Guarachi Apaza</h5>
+                        <span class="badge role-collab mb-2">
+                            <i class="bi bi-person-badge"></i> Colaborador
+                        </span>
 
-               <button class="btn btn-collab w-100 mt-2"
-                    data-bs-toggle="collapse" data-bs-target="#fernando">
-                    <i class="bi bi-chevron-double-down"></i> Ver perfil
-                </button>
+                        <button class="btn btn-collab w-100 mt-2" data-bs-toggle="collapse" data-bs-target="#fernando">
+                            <i class="bi bi-chevron-double-down"></i> Ver perfil
+                        </button>
 
-                <div class="collapse mt-3 text-start" id="fernando">
+                        <div class="collapse mt-3 text-start" id="fernando">
 
-                    <p class="small">
-                        Desarrollador backend y frontend, enfocado en lógica del sistema y UI/UX.
-                    </p>
+                            <p class="small">
+                                Desarrollador backend y frontend, enfocado en lógica del sistema y UI/UX.
+                            </p>
 
-                    <p class="fw-bold mb-1 title-white">
-                        <i class="bi bi-code-slash text-lead"></i> Tecnologías:
-                    </p>
-                    <span class="badge bg-warning text-dark">HTML</span>
-                    <span class="badge bg-warning text-dark">CSS</span>
-                    <span class="badge bg-warning text-dark">JS</span>
-                    <span class="badge bg-warning text-dark">PHP</span>
-                    <span class="badge bg-warning text-dark">MySQL</span>
+                            <p class="fw-bold mb-1 title-white">
+                                <i class="bi bi-code-slash text-lead"></i> Tecnologías:
+                            </p>
+                            <span class="badge bg-warning text-dark">HTML</span>
+                            <span class="badge bg-warning text-dark">CSS</span>
+                            <span class="badge bg-warning text-dark">JS</span>
+                            <span class="badge bg-warning text-dark">PHP</span>
+                            <span class="badge bg-warning text-dark">MySQL</span>
 
-                    <p class="fw-bold mt-3 mb-1 title-white">
-                        <i class="bi bi-heart-fill text-danger"></i> Hobbies:
-                    </p>
-                    <span class="badge bg-secondary">Programar</span>
-                    <span class="badge bg-secondary">Lectura</span>
-                    <span class="badge bg-secondary">Deporte</span>
-                    <span class="badge bg-secondary">Aprender</span>
+                            <p class="fw-bold mt-3 mb-1 title-white">
+                                <i class="bi bi-heart-fill text-danger"></i> Hobbies:
+                            </p>
+                            <span class="badge bg-secondary">Programar</span>
+                            <span class="badge bg-secondary">Lectura</span>
+                            <span class="badge bg-secondary">Deporte</span>
+                            <span class="badge bg-secondary">Aprender</span>
 
-                    <div class="d-flex gap-2 mt-3">
-                        <a href="#" class="btn btn-outline-light btn-sm">
-                            <i class="bi bi-github"></i> GitHub
-                        </a>
-                        <a href="#" class="btn btn-outline-primary btn-sm">
-                            <i class="bi bi-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="#" class="btn btn-outline-warning btn-sm">
-                            <i class="bi bi-globe"></i> Portafolio
-                        </a>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-outline-light btn-sm">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="#" class="btn btn-outline-warning btn-sm">
+                                    <i class="bi bi-globe"></i> Portafolio
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Josue -->
-        <div class="col-md-4">
-            <div class="card team-card glass text-center p-3">
-                <img src="img/josue.jpg" class="rounded-circle mx-auto profile-img" width="140">
+                <!-- Josue -->
+                <div class="col-md-4">
+                    <div class="card team-card glass text-center p-3">
+                        <img src="img/josue.jpg" class="rounded-circle mx-auto profile-img" width="140">
 
-                <h5 class="fw-bold mt-3 mb-1 text-collab">Josue Angel Vallejos Condori</h5>
-                <span class="badge role-collab mb-2">
-                    <i class="bi bi-person-check-fill"></i> Colaborador
-                </span>
+                        <h5 class="fw-bold mt-3 mb-1 text-collab">Josue Angel Vallejos Condori</h5>
+                        <span class="badge role-collab mb-2">
+                            <i class="bi bi-person-check-fill"></i> Colaborador
+                        </span>
 
-               <button class="btn btn-collab w-100 mt-2"
-                    data-bs-toggle="collapse" data-bs-target="#josue">
-                    <i class="bi bi-chevron-double-down"></i> Ver perfil
-                </button>
+                        <button class="btn btn-collab w-100 mt-2" data-bs-toggle="collapse" data-bs-target="#josue">
+                            <i class="bi bi-chevron-double-down"></i> Ver perfil
+                        </button>
 
-                <div class="collapse mt-3 text-start" id="josue">
+                        <div class="collapse mt-3 text-start" id="josue">
 
-                    <p class="small">
-                        Encargado de testing, soporte técnico y documentación del sistema.
-                    </p>
+                            <p class="small">
+                                Encargado de testing, soporte técnico y documentación del sistema.
+                            </p>
 
-                    <p class="fw-bold mb-1 title-white">
-                        <i class="bi bi-code-slash text-lead"></i> Tecnologías:
-                    </p>
-                    <span class="badge bg-success">Bootstrap</span>
-                    <span class="badge bg-success">MySQL</span>
-                    <span class="badge bg-success">Git</span>
+                            <p class="fw-bold mb-1 title-white">
+                                <i class="bi bi-code-slash text-lead"></i> Tecnologías:
+                            </p>
+                            <span class="badge bg-success">Bootstrap</span>
+                            <span class="badge bg-success">MySQL</span>
+                            <span class="badge bg-success">Git</span>
 
-                    <p class="fw-bold mt-3 mb-1 title-white">
-                        <i class="bi bi-heart-fill text-danger"></i> Hobbies:
-                    </p>
-                    <span class="badge bg-secondary">Testing</span>
-                    <span class="badge bg-secondary">Videojuegos</span>
-                    <span class="badge bg-secondary">Tecnología</span>
-                    <span class="badge bg-secondary">Aprendizaje</span>
+                            <p class="fw-bold mt-3 mb-1 title-white">
+                                <i class="bi bi-heart-fill text-danger"></i> Hobbies:
+                            </p>
+                            <span class="badge bg-secondary">Testing</span>
+                            <span class="badge bg-secondary">Videojuegos</span>
+                            <span class="badge bg-secondary">Tecnología</span>
+                            <span class="badge bg-secondary">Aprendizaje</span>
 
-                    <div class="d-flex gap-2 mt-3">
-                        <a href="#" class="btn btn-outline-light btn-sm">
-                            <i class="bi bi-github"></i> GitHub
-                        </a>
-                        <a href="#" class="btn btn-outline-primary btn-sm">
-                            <i class="bi bi-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="#" class="btn btn-outline-warning btn-sm">
-                            <i class="bi bi-globe"></i> Portafolio
-                        </a>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="#" class="btn btn-outline-light btn-sm">
+                                    <i class="bi bi-github"></i> GitHub
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="#" class="btn btn-outline-warning btn-sm">
+                                    <i class="bi bi-globe"></i> Portafolio
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
-    </div>
-</div>
 
+        <!-- TECNOLOGÍAS -->
+        <div id="tech" class="glass p-4">
+            <h4 class="mb-4 text-center">
+                <i class="bi bi-cpu-fill text-info"></i> Stack Tecnológico
+            </h4>
 
-    <!-- TECNOLOGÍAS -->
-    <div id="tech" class="glass p-4">
-    <h4 class="mb-4 text-center">
-        <i class="bi bi-cpu-fill text-info"></i> Stack Tecnológico
-    </h4>
+            <p class="text-center text-soft mb-4">
+                Tecnologías utilizadas en el desarrollo del sistema, su función dentro del proyecto
+                y nivel de dominio aplicado.
+            </p>
 
-    <p class="text-center text-soft mb-4">
-        Tecnologías utilizadas en el desarrollo del sistema, su función dentro del proyecto
-        y nivel de dominio aplicado.
-    </p>
+            <div class="row g-4">
 
-    <div class="row g-4">
+                <!-- PHP -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-bold text-info mb-0">
+                                <i class="bi bi-filetype-php"></i> PHP
+                            </h6>
+                            <span class="badge role-lead" data-bs-toggle="tooltip"
+                                title="Lenguaje backend principal encargado de la lógica del sistema, seguridad, autenticación, CRUD, reglas de negocio y conexión con la base de datos.">
+                                Backend Core
+                            </span>
+                        </div>
 
-        <!-- PHP -->
-        <div class="col-md-6">
-            <div class="glass p-3 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <h6 class="fw-bold text-info mb-0">
-                        <i class="bi bi-filetype-php"></i> PHP
-                    </h6>
-                    <span class="badge role-lead"
-                          data-bs-toggle="tooltip"
-                          title="Lenguaje backend principal encargado de la lógica del sistema, seguridad, autenticación, CRUD, reglas de negocio y conexión con la base de datos.">
-                        Backend Core
-                    </span>
+                        <p class="small text-soft">
+                            Permite procesar la lógica principal del sistema, controlar los flujos de datos,
+                            validar información y administrar las operaciones del inventario.
+                        </p>
+
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-info progress-animate" style="width: 90%">90%</div>
+                        </div>
+                    </div>
                 </div>
 
-                <p class="small text-soft">
-                    Permite procesar la lógica principal del sistema, controlar los flujos de datos,
-                    validar información y administrar las operaciones del inventario.
-                </p>
+                <!-- MySQL -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-bold text-warning mb-0">
+                                <i class="bi bi-database-fill"></i> MySQL
+                            </h6>
+                            <span class="badge bg-warning text-dark" data-bs-toggle="tooltip"
+                                title="Motor de base de datos encargado del almacenamiento, relaciones, consultas, integridad y seguridad de la información.">
+                                Base de Datos
+                            </span>
+                        </div>
 
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-info progress-animate" style="width: 90%">90%</div>
+                        <p class="small text-soft">
+                            Almacena toda la información del sistema, permitiendo consultas rápidas,
+                            relaciones entre tablas y control eficiente de los datos.
+                        </p>
+
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-warning text-dark progress-animate" style="width: 88%">88%</div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Bootstrap -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-bold text-purple mb-0">
+                                <i class="bi bi-bootstrap-fill"></i> Bootstrap 5
+                            </h6>
+                            <span class="badge bg-purple" data-bs-toggle="tooltip"
+                                title="Framework CSS para diseño responsive, UX/UI profesional, componentes modernos y accesibilidad.">
+                                UI Framework
+                            </span>
+                        </div>
+
+                        <p class="small text-soft">
+                            Permite crear interfaces modernas, responsivas y visualmente atractivas,
+                            optimizando la experiencia del usuario.
+                        </p>
+
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-purple progress-animate" style="width: 95%">95%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-bold text-warning mb-0">
+                                <i class="bi bi-filetype-js"></i> JavaScript
+                            </h6>
+                            <span class="badge bg-warning text-dark" data-bs-toggle="tooltip"
+                                title="Lenguaje encargado de la interactividad, validaciones dinámicas, eventos y experiencia del usuario.">
+                                Interactividad
+                            </span>
+                        </div>
+
+                        <p class="small text-soft">
+                            Permite generar validaciones en tiempo real, interacción dinámica,
+                            animaciones y mejora notable de la usabilidad.
+                        </p>
+
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-warning text-dark progress-animate" style="width: 80%">80%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HTML -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-bold text-danger mb-0">
+                                <i class="bi bi-filetype-html"></i> HTML5
+                            </h6>
+                            <span class="badge bg-danger" data-bs-toggle="tooltip"
+                                title="Lenguaje de marcado para la estructura semántica, accesibilidad y organización del contenido.">
+                                Estructura
+                            </span>
+                        </div>
+
+                        <p class="small text-soft">
+                            Define la estructura del sistema, garantizando organización,
+                            accesibilidad, semántica correcta y compatibilidad multiplataforma.
+                        </p>
+
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-danger progress-animate" style="width: 95%">95%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CSS -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-bold text-info mb-0">
+                                <i class="bi bi-filetype-css"></i> CSS3
+                            </h6>
+                            <span class="badge bg-info" data-bs-toggle="tooltip"
+                                title="Lenguaje encargado del diseño visual, estilos, animaciones y layouts modernos.">
+                                Diseño
+                            </span>
+                        </div>
+
+                        <p class="small text-soft">
+                            Permite mejorar la presentación visual, implementar animaciones,
+                            efectos modernos y garantizar una interfaz agradable.
+                        </p>
+
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-info progress-animate" style="width: 90%">90%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GitHub -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-bold text-light mb-0">
+                                <i class="bi bi-github"></i> GitHub
+                            </h6>
+                            <span class="badge bg-dark" data-bs-toggle="tooltip"
+                                title="Sistema de control de versiones para trabajo colaborativo, ramas, control de cambios y despliegue.">
+                                Versionado
+                            </span>
+                        </div>
+
+                        <p class="small text-soft">
+                            Facilita el trabajo colaborativo, control de versiones, integración continua
+                            y respaldo seguro del código fuente.
+                        </p>
+
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-dark progress-animate" style="width: 85%">85%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XAMPP -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-bold text-success mb-0">
+                                <i class="bi bi-server"></i> XAMPP
+                            </h6>
+                            <span class="badge bg-success" data-bs-toggle="tooltip"
+                                title="Servidor local con Apache, PHP y MySQL para pruebas, desarrollo y simulación del entorno real.">
+                                Entorno Local
+                            </span>
+                        </div>
+
+                        <p class="small text-soft">
+                            Permite desarrollar, probar y depurar el sistema localmente
+                            antes de su despliegue en producción.
+                        </p>
+
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-success progress-animate" style="width: 90%">90%</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <!-- MySQL -->
-        <div class="col-md-6">
-            <div class="glass p-3 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <h6 class="fw-bold text-warning mb-0">
-                        <i class="bi bi-database-fill"></i> MySQL
-                    </h6>
-                    <span class="badge bg-warning text-dark"
-                          data-bs-toggle="tooltip"
-                          title="Motor de base de datos encargado del almacenamiento, relaciones, consultas, integridad y seguridad de la información.">
-                        Base de Datos
-                    </span>
+
+        <!-- SECCIÓN FUNCIONALIDADES (Colaborador 1) -->
+        <div id="funcionalidades" class="glass p-4 mt-4">
+            <h4 class="mb-4"><i class="bi bi-gear-fill"></i> Funcionalidades del sistema</h4>
+            <p class="text-soft mb-4">
+                A continuación se presentan las principales funcionalidades del sistema,
+                representadas mediante una simulación visual con datos dinámicos.
+            </p>
+
+            <div class="row g-4">
+
+                <!-- Registro / Edición / Eliminación -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <h5 class="text-info"><i class="bi bi-plus-circle"></i> Gestión de productos</h5>
+                        <p class="text-soft small">
+                            Registro, edición y eliminación de productos del inventario.
+                        </p>
+
+                        <input class="form-control mb-2" placeholder="Código del producto" disabled>
+                        <input class="form-control mb-2" placeholder="Nombre del producto" disabled>
+                        <input class="form-control mb-2" placeholder="Stock inicial" disabled>
+
+                        <div class="d-flex gap-2">
+
+                        </div>
+                    </div>
                 </div>
 
-                <p class="small text-soft">
-                    Almacena toda la información del sistema, permitiendo consultas rápidas,
-                    relaciones entre tablas y control eficiente de los datos.
-                </p>
+                <!-- Inventario en tiempo real -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <h5 class="text-info"><i class="bi bi-graph-up"></i> Monitoreo de stock en tiempo real</h5>
+                        <p class="text-soft small">
+                            Visualización automática del stock disponible.
+                        </p>
 
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-warning text-dark progress-animate" style="width: 88%">88%</div>
+                        <table class="table table-sm table-dark">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Stock</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaStock"></tbody>
+                        </table>
+
+                        <small class="text-soft">
+                            Actualización simulada cada 3 segundos
+                        </small>
+                    </div>
                 </div>
+
+                <!-- Movimientos -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <h5 class="text-info"><i class="bi bi-arrow-left-right"></i> Movimientos de inventario</h5>
+                        <p class="text-soft small">
+                            Registro ordenado de entradas y salidas de productos.
+                        </p>
+
+                        <ul class="list-group list-group-flush" id="listaMovimientos"></ul>
+                    </div>
+                </div>
+
+                <!-- Reportes -->
+                <div class="col-md-6">
+                    <div class="glass p-3 h-100">
+                        <h5 class="text-info"><i class="bi bi-file-earmark-bar-graph"></i> Reportes básicos</h5>
+                        <p class="text-soft small">
+                            Información resumida para la toma de decisiones.
+                        </p>
+
+                        <div class="row text-center">
+                            <div class="col">
+                                <h6 class="text-soft">Total productos</h6>
+                                <span class="badge bg-info fs-6" id="repProductos">0</span>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-soft">Stock bajo</h6>
+                                <span class="badge bg-danger fs-6" id="repStockBajo">0</span>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-soft">Movimientos</h6>
+                                <span class="badge bg-success fs-6" id="repMovimientos">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <!-- Bootstrap -->
-        <div class="col-md-6">
-            <div class="glass p-3 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <h6 class="fw-bold text-purple mb-0">
-                        <i class="bi bi-bootstrap-fill"></i> Bootstrap 5
-                    </h6>
-                    <span class="badge bg-purple"
-                          data-bs-toggle="tooltip"
-                          title="Framework CSS para diseño responsive, UX/UI profesional, componentes modernos y accesibilidad.">
-                        UI Framework
-                    </span>
-                </div>
-
-                <p class="small text-soft">
-                    Permite crear interfaces modernas, responsivas y visualmente atractivas,
-                    optimizando la experiencia del usuario.
-                </p>
-
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-purple progress-animate" style="width: 95%">95%</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- JavaScript -->
-        <div class="col-md-6">
-            <div class="glass p-3 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <h6 class="fw-bold text-warning mb-0">
-                        <i class="bi bi-filetype-js"></i> JavaScript
-                    </h6>
-                    <span class="badge bg-warning text-dark"
-                          data-bs-toggle="tooltip"
-                          title="Lenguaje encargado de la interactividad, validaciones dinámicas, eventos y experiencia del usuario.">
-                        Interactividad
-                    </span>
-                </div>
-
-                <p class="small text-soft">
-                    Permite generar validaciones en tiempo real, interacción dinámica,
-                    animaciones y mejora notable de la usabilidad.
-                </p>
-
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-warning text-dark progress-animate" style="width: 80%">80%</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- HTML -->
-        <div class="col-md-6">
-            <div class="glass p-3 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <h6 class="fw-bold text-danger mb-0">
-                        <i class="bi bi-filetype-html"></i> HTML5
-                    </h6>
-                    <span class="badge bg-danger"
-                          data-bs-toggle="tooltip"
-                          title="Lenguaje de marcado para la estructura semántica, accesibilidad y organización del contenido.">
-                        Estructura
-                    </span>
-                </div>
-
-                <p class="small text-soft">
-                    Define la estructura del sistema, garantizando organización,
-                    accesibilidad, semántica correcta y compatibilidad multiplataforma.
-                </p>
-
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-danger progress-animate" style="width: 95%">95%</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CSS -->
-        <div class="col-md-6">
-            <div class="glass p-3 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <h6 class="fw-bold text-info mb-0">
-                        <i class="bi bi-filetype-css"></i> CSS3
-                    </h6>
-                    <span class="badge bg-info"
-                          data-bs-toggle="tooltip"
-                          title="Lenguaje encargado del diseño visual, estilos, animaciones y layouts modernos.">
-                        Diseño
-                    </span>
-                </div>
-
-                <p class="small text-soft">
-                    Permite mejorar la presentación visual, implementar animaciones,
-                    efectos modernos y garantizar una interfaz agradable.
-                </p>
-
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-info progress-animate" style="width: 90%">90%</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- GitHub -->
-        <div class="col-md-6">
-            <div class="glass p-3 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <h6 class="fw-bold text-light mb-0">
-                        <i class="bi bi-github"></i> GitHub
-                    </h6>
-                    <span class="badge bg-dark"
-                          data-bs-toggle="tooltip"
-                          title="Sistema de control de versiones para trabajo colaborativo, ramas, control de cambios y despliegue.">
-                        Versionado
-                    </span>
-                </div>
-
-                <p class="small text-soft">
-                    Facilita el trabajo colaborativo, control de versiones, integración continua
-                    y respaldo seguro del código fuente.
-                </p>
-
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-dark progress-animate" style="width: 85%">85%</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- XAMPP -->
-        <div class="col-md-6">
-            <div class="glass p-3 h-100">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <h6 class="fw-bold text-success mb-0">
-                        <i class="bi bi-server"></i> XAMPP
-                    </h6>
-                    <span class="badge bg-success"
-                          data-bs-toggle="tooltip"
-                          title="Servidor local con Apache, PHP y MySQL para pruebas, desarrollo y simulación del entorno real.">
-                        Entorno Local
-                    </span>
-                </div>
-
-                <p class="small text-soft">
-                    Permite desarrollar, probar y depurar el sistema localmente
-                    antes de su despliegue en producción.
-                </p>
-
-                <div class="progress" style="height: 10px;">
-                    <div class="progress-bar bg-success progress-animate" style="width: 90%">90%</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
-</script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+        </script>
 
 </body>
+
 </html>
